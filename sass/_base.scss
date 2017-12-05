@@ -1,0 +1,345 @@
+body{
+    position: relative;
+    min-width: 320px;
+    font-family: $regular-font;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: $white-color;
+    color: $black-color;
+}
+
+//Icons
+//Social Icons
+.social-icon{
+    font-family: 'social-icon';
+    font-size: 42px;
+    font-style: normal;
+    text-rendering: auto;
+    text-transform: none;
+    color: $white-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font: grayscale;
+}
+
+.social-icon.a-soc::before{
+    content: 'a';
+}
+
+.social-icon.b-soc::before{
+    content: 'b';
+}
+
+.social-icon.c-soc::before{
+    content: 'c';
+}
+
+.social-icon.d-soc::before{
+    content: 'd';
+}
+
+.social-icon.e-soc::before{
+    content: 'e';
+}
+
+//Base Icons
+.icon{
+    display: inline-block;
+    font-family: 'iconset';
+    font-size: 48px;
+    font-style: normal;
+    text-rendering: auto;
+    text-transform: none;
+    color: $black-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font: grayscale;
+}
+
+.icon.a::before{
+    content: 'a';
+}
+
+.icon.b::before{
+    content: 'b';
+}
+
+.icon.c::before{
+    content: 'c';
+}
+
+.icon.d::before{
+    content: 'd';
+}
+
+.icon.e::before{
+    content: 'e';
+}
+
+.icon.f::before{
+    content: 'f';
+}
+
+.icon.g::before{
+    content: 'g';
+}
+
+.icon.h::before{
+    content: 'h';
+}
+
+.icon.i::before{
+    content: 'i';
+}
+
+.icon.j::before{
+    content: 'j';
+}
+
+.icon.k::before{
+    content: 'k';
+}
+
+.icon.l::before{
+    content: 'l';
+}
+
+.icon.m::before{
+    content: 'm';
+}
+
+.icon.n::before{
+    content: 'n';
+}
+
+.icon.o::before{
+    content: 'o';
+}
+
+.icon.p::before{
+    content: 'p';
+}
+
+.icon.q::before{
+    content: 'q';
+}
+
+.icon.r::before{
+    content: 'r';
+}
+
+.icon.s::before{
+    content: 's';
+}
+
+.icon.t::before{
+    content: 't';
+}
+
+.icon.u::before{
+    content: 'u';
+}
+
+.icon.v::before{
+    content: 'v';
+}
+
+.icon.w::before{
+    content: 'w';
+}
+
+.icon.x::before{
+    content: 'x';
+}
+
+.icon.y::before{
+    content: 'y';
+}
+
+//Base
+*::-webkit-input-placeholder{
+    color: #666;
+    opacity: 1;
+}
+
+*:-moz-placeholder{
+    color: #666;
+	opacity: 1;
+}
+
+
+*::-moz-placeholder{
+    color: #666;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder{
+    color: #666;
+    opacity: 1;
+}
+
+body input{
+    outline: none;
+}
+
+input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: $regular-font;
+    color: $black-color;
+    background-color: $white-color;
+    border: 1px solid $form-style-color;
+    
+    &:focus{
+        box-shadow: inset 0 0 0 2px $accent-color;
+        border: 1px solid transparent;
+    }
+
+    &:focus:required:valid{
+        box-shadow: inset 0 0 0 2px $accent-color;
+        border: 1px solid transparent;
+    }
+
+    &:focus:required:invalid{
+        box-shadow: inset 0 0 0 2px $red-color;
+        border: 1px solid transparent;
+    }
+    
+}
+
+.hidden{
+    display: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active{
+    color: $white-color;
+    text-decoration: none;
+    outline: none;
+}
+
+.box{
+    padding: 30px 0 70px 0;
+}
+
+.headers{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    font-family: $bold-font;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: normal;
+    text-transform: uppercase;
+    
+    &::after{
+        position: absolute;
+        display: inline-block;
+        bottom: -10px;
+        left: 50%;
+        content: '';
+        margin-left: -80px;
+        height: 3px;
+        width: 160px;
+        background-color: $accent-color;
+    }
+    
+}
+.headers-light{
+    color: $white-color;
+}
+
+.forms{
+    padding: 35px 30px 45px 30px;
+    font-family: $light-font;
+    background-color: $form-background;
+    color: $black-color;
+    border-bottom: 3px solid $accent-color;
+    
+    @media only screen and (max-width : 479px){
+        padding: 30px 25px 40px 25px;
+    }
+    
+    h4{
+        margin: 0 0 10px 0;
+        font-family: $semibold-font;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p{
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    label{
+        display: block;
+        margin-top: 20px;
+    }
+
+    span{
+        display: block;
+        font-size: 14px;
+        font-family: $regular-font;
+        text-transform: uppercase;
+    }
+
+    .form-btn{
+        margin-top: 30px;
+        border: 1px solid $form-style-color;
+        background-color: transparent;
+        transition: all 0.5s ease;
+
+        &:hover{
+            border: 1px solid $accent-color;
+        }
+        
+    }
+    
+}//.forms
+
+//Buttons
+.button-wrapp{
+    text-align: center;
+}
+
+.buttons{
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: $semibold-font;
+    text-transform: uppercase;
+}
+
+.dark-btn{
+    border: 2px solid $black-color;
+    font-size: 20px;
+    color: $black-color;
+    transition: all 0.5s ease;
+    
+    &:hover{
+        color: $black-color;
+        border: 2px solid $accent-color;
+    }
+    
+}
+
+.light-btn{
+    border: 2px solid $white-color;
+    font-size: 20px;
+    color: $white-color;
+    transition: all 0.5s ease;
+    
+    &:hover{
+        border: 2px solid $accent-color;
+    }
+    
+}

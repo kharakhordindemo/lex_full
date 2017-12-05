@@ -1,0 +1,288 @@
+@import '_fonts';
+@import '_vars';
+@import '_base';
+
+//Header
+#header{
+    min-height: 620px;
+    padding-bottom: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-top: 3px solid $accent-color;
+    
+    .header-top{
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        
+        @media only screen and (max-width : 479px){
+            padding: 10px 0;
+        }
+        
+        .logo{
+            display: block;
+            width: 100px;
+            
+            @media only screen and (max-width : 479px){
+                width: 80px;
+            }
+            
+            img{
+                width: 100%;
+            }
+            
+        }
+        
+        .main-menu-wrapp{
+            position: relative;
+            
+            .main-menu{
+                font-size: 14px;
+                line-height: 97px;
+                text-transform: uppercase;
+                font-family: $semibold-font;
+                color: $white-color;
+                
+                @media only screen and (min-width : 1200px){
+                    display: block !important;
+                }
+            
+                @media only screen and (max-width : 1199px){
+                    display: none;
+                    min-width: 320px;
+                    position: absolute;
+                    right: 0;
+                    top: 88px;
+                    z-index: 1;
+                    background-color: $black-color;
+                    text-align: center;
+                    border-top: 2px solid $accent-color;
+                    border-bottom: 2px solid $accent-color;
+                }
+                
+                @media only screen and (max-width : 479px){
+                    line-height: 78px;
+                }
+                
+                @media only screen and (max-width : 320px){
+                    right: -15px;
+                }
+            
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                        display: inline-block;
+                        margin-right: 8px;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                        
+                        &.active>a{
+                            color: $accent-color;
+                        }
+                        
+                        @media only screen and (max-width : 1199px){
+                            display: block;
+                            margin-right: 0;
+                            line-height: 1.6;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        }
+
+                        &:last-child{
+                            margin-right: 0;
+                            
+                            @media only screen and (max-width : 1199px){
+                                border-bottom: none;
+                            }
+                            
+                        }
+                        
+                        a{
+                            display: block;
+                            background-color: transparent;
+                            transition: all 0.5s ease;
+                            
+                            @media only screen and (max-width : 1199px){
+                                padding: 10px 25px;
+                            }
+                            
+                        }
+                        
+                        a:hover{
+                            color: $accent-color;
+                            
+                            @media only screen and (max-width : 1199px){
+                                background-color: $black-color-hover;
+                            }
+                            
+                        }
+                        
+                    }//li
+                    
+                }//ul
+            
+            }//.main-menu
+            
+            .toggle-menu{
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+                width: 28px;
+                height: 28px;
+                margin-top: 40.5px;
+                
+                @media only screen and (max-width : 479px){
+                    margin-top: 31.5px;
+                }
+                
+            }
+            
+            .toggle-menu span:after,
+            .toggle-menu span:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 9px;
+            }
+            
+            .toggle-menu span:after{
+                top: 18px;
+            }
+            
+            .toggle-menu span{
+                position: relative;
+                display: block;
+            }
+            
+            .toggle-menu span,
+            .toggle-menu span:after,
+            .toggle-menu span:before{
+                width: 100%;
+                height: 3px;
+                background-color: $white-color;
+                transition: all 0.3s;
+                backface-visibility: hidden;
+                border-radius: 2px;
+            }
+            
+            .toggle-menu.on span{
+                background-color: transparent;
+            }
+            
+            .toggle-menu.on span:before{
+                transform: rotate(45deg) translate(-1px, 0px);
+            }
+            
+            .toggle-menu.on span:after{
+                transform: rotate(-45deg) translate(6px, -7px);
+            }
+            
+            .toggle-menu.on + #menu{
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }//.main-menu-wrapp
+        
+    }//.header-top
+    
+    .header-middle{
+        margin-top: 60px;
+        
+        @media only screen and (max-width : 479px){
+            margin-top: 30px;
+        }
+        
+        .header-left{
+            margin-bottom: 40px;
+            
+            .header-title{
+                display: inline-block;
+                margin: 0;
+                font-size: 48px;
+                font-family: $bold-font;
+                font-weight: normal;
+                line-height: 1.4;
+                color: $white-color;
+                text-transform: capitalize;
+                border-bottom: 3px solid $accent-color;
+                
+                @media only screen and (max-width : 1199px){
+                    font-size: 40px;
+                }
+                
+                @media only screen and (max-width : 479px){
+                    text-align: center;
+                    line-height: 1.2;
+                }
+            
+                span{
+                    font-size: 64px;
+                    text-transform: uppercase;
+                    
+                    @media only screen and (max-width : 1199px){
+                        font-size: 56px;
+                    }
+                    
+                }
+            
+            }//.header-title
+        
+            ul{
+                padding: 0;
+                margin: 30px 0 0 25px;
+                list-style: none;
+
+                li{
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    font-family: $semibold-font;
+                    color: $white-color;
+                    
+                    @media only screen and (max-width : 479px){
+                        font-size: 18px;
+                    }
+                    
+                    @media only screen and (max-width : 365px){
+                        font-size: 15px;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    .mark{
+                        position: relative;
+                        bottom: 5px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        width: 25px;
+                        height: 15px;
+                        border-left: 3px solid $accent-color;
+                        border-bottom: 3px solid $accent-color;
+                        transform: rotate(-45deg);
+                        
+                        @media only screen and (max-width : 479px){
+                            width: 20px;
+                            height: 10px;
+                        }
+                        
+                    }
+                    
+                }//li
+                
+            }//ul
+            
+        }//.header-left
+        
+    }//.header-middle
+    
+}//#header
+
+
+
+
+
